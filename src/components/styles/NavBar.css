@@ -1,0 +1,28 @@
+.navBar {
+  background-color: #1c3643;
+  width: 100%;
+  padding: 0.5rem 0px;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: white;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+}
+.navBar a:hover {
+  color: white;
+}
+
+.navBar_logo {
+  margin-right: 0.5rem;
+}
+
+.navBar .navBar_title-1 {
+  font-weight: 300;
+}
+
+.navBar .navBar_title-2 {
+  font-weight: bold;
+}
