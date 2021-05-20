@@ -4,6 +4,7 @@ import header from '../images/badge-header.svg'
 import './styles/BadgeNew.css'
 import Badge from '../components/Badge'
 import photo from '../images/4fb6dd0d-b0c4-47a3-9c7e-8141db526a25.jpg'
+import BadgeForm from '../components/BadgeForm'
 
 class BadgeNew extends React.Component{
     render(){
@@ -15,7 +16,7 @@ class BadgeNew extends React.Component{
                 </div>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col'>
+                        <div className='col-6'>
                             <Badge 
                             firstName='Victor' 
                             surnames='Gea Villa' 
@@ -24,7 +25,9 @@ class BadgeNew extends React.Component{
                             avatar={photo}>             
                             </Badge>
                         </div>
-                    <div />
+                        <div className='col-6'>
+                            <BadgeForm />
+                        </div>
                     </div>
                 </div>
             </div>
