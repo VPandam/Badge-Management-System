@@ -73,5 +73,12 @@ a.link-unstyled:hover {
 }
 
 .btn-save {
-  margin-top: 30px;
+  margin-top: 12px;
+}
+.form-group {
+  margin-top: 15px;
+}
+
+.form-group input {
+  margin-top: 8px;
 }

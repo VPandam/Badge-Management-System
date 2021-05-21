@@ -3,10 +3,30 @@ import NavBar from '../components/NavBar'
 import header from '../images/badge-header.svg'
 import './styles/BadgeNew.css'
 import Badge from '../components/Badge'
-import photo from '../images/4fb6dd0d-b0c4-47a3-9c7e-8141db526a25.jpg'
+import photo from '../images/a.jpg'
 import BadgeForm from '../components/BadgeForm'
 
 class BadgeNew extends React.Component{
+    
+    state = {
+        form: {
+            firstName: '',
+            secondName: '',
+            email: '',
+            jobTitle: '',
+            twitter: ''
+        }
+    };
+
+    handleChange = e => {
+        const nextForm = this.state.form;
+        nextForm[e.target.name] = e.target.value;    
+        this.setState({
+            form: nextForm
+        });  
+    }
+
+
     render(){
         return (
             <div>
@@ -18,15 +38,15 @@ class BadgeNew extends React.Component{
                     <div className='row'>
                         <div className='col-6'>
                             <Badge 
-                            firstName='Victor' 
-                            surnames='Gea Villa' 
-                            jobTitle='Frontend Developer' 
-                            twitter='@VitoYeah' 
+                            firstName={this.state.form.firstName} 
+                            surnames={this.state.form.secondName} 
+                            jobTitle={this.state.form.jobTitle} 
+                            twitter={this.state.form.twitter} 
                             avatar={photo}>             
                             </Badge>
                         </div>
                         <div className='col-6'>
-                            <BadgeForm />
+                            <BadgeForm onChange={this.handleChange} formValues={this.state.form} />
                         </div>
                     </div>
                 </div>
