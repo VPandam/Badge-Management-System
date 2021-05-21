@@ -82,3 +82,7 @@ a.link-unstyled:hover {
 .form-group input {
   margin-top: 8px;
 }
+
+.form-text {
+  margin-top: 16px;
+}
