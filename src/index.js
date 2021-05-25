@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import BadgeNew from './pages/BadgeNew'
-import 'bootstrap/dist/css/bootstrap.css'
+
+import 'bootstrap/dist/css/bootstrap.css';
 import './Global.css';
+
+import App from './components/App';
 
 
 const container = document.getElementById('app');
 
 ReactDOM.render(
-    <BadgeNew />
+    <App />
     , container);

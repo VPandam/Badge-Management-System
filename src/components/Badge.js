@@ -4,6 +4,7 @@ import confLogo from "../images/badge-header.svg";
 import "./styles/Badge.css";
 
 class Badge extends React.Component {
+    
     render(){
         return <div className="Badge">
             <div className="Badge__header">
@@ -20,6 +21,7 @@ class Badge extends React.Component {
             <div className="Badge__footer">
                 <p>#Platziconf</p> 
             </div>
+            
         </div> 
     }   
 }

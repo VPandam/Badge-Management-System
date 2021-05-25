@@ -71,46 +71,7 @@ class BadgeForm extends React.Component {
               value={this.props.formValues.twitter}
             />
           </div>
-          <div className="form-group">
-            <label>Second Name</label>
-            <input
-              onChange={this.props.onChange}
-              className="form-control"
-              type="text"
-              name="secondName"
-              value={this.props.formValues.secondName}
-            />
-          </div>
-          <div className="form-group">
-            <label>Job Title</label>
-            <input
-              onChange={this.props.onChange}
-              className="form-control"
-              type="text"
-              name="jobTitle"
-              value={this.props.formValues.jobTitle}
-            />
-          </div>
-          <div className="form-group">
-            <label>Email</label>
-            <input
-              onChange={this.props.onChange}
-              className="form-control"
-              type="email"
-              name="email"
-              value={this.props.formValues.email}
-            />
-          </div>
-          <div className="form-group">
-            <label>Twitter</label>
-            <input
-              onChange={this.props.onChange}
-              className="form-control"
-              type="text"
-              name="twitter"
-              value={this.props.formValues.twitter}
-            />
-          </div>
+          
          
           <button onClick={this.handleClick} className="btn btn-primary btn-save">
             Save

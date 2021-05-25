@@ -3,7 +3,7 @@ import NavBar from '../components/NavBar'
 import header from '../images/badge-header.svg'
 import './styles/BadgeNew.css'
 import Badge from '../components/Badge'
-import photo from '../images/a.jpg'
+import photo from '../images/d.jpg'
 import BadgeForm from '../components/BadgeForm'
 
 class BadgeNew extends React.Component{
@@ -20,7 +20,7 @@ class BadgeNew extends React.Component{
     handleChange = e => {
         this.setState({
             form: {
-                ... this.state.form, //Three dots spreads the values of the iterable object.
+                ...this.state.form, //Three dots spreads the values of the iterable object.
                                     //In this case evaluates to all the values that have been typed in the form 
                 [e.target.name]: e.target.value //With this expression we add a new value to the property.
             
