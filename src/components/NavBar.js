@@ -7,7 +7,7 @@ class NavBar extends React.Component{
     render(){
         return(
             <div className='navBar'>
-                <Link to='/'>
+                <Link to='/home'>
                     <img className='navBar_logo' src={logo} alt="" />
                     <span className='navBar_title-1'>Platzi</span>
                     <span className='navBar_title-2'>Conf</span>
