@@ -17,8 +17,10 @@ class BadgeNew extends React.Component{
     }
     
     handleChange = e => {
+        
         this.setState({
             form: {
+                
                 ...this.state.form, //Three dots spreads the values of the iterable object.
                                     //In this case evaluates to all the values that have been typed in the form 
                 [e.target.name]: e.target.value //With this expression we add a new value to the property.
@@ -26,12 +28,12 @@ class BadgeNew extends React.Component{
                 //Another way to do that would be:
                 // const NEW_FORM = this.state.form;
                 // NEW_FORM[e.target.name] = e.target.value; 
-                // this.setState({form: NEW_FORM})
+                // this.setState({form: NEW_FORM})               
             
             }
         })
       };
-    
+      
     render(){
         return (
             <React.Fragment>
