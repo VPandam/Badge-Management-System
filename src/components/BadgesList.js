@@ -4,6 +4,10 @@ import './styles/BadgesList.css';
 class BadgesList extends React.Component{
     render(){
         
+        if (this.props.data.length === 0) {
+            return <h3> No badges found </h3>
+        }
+        
         return (
         <div className='Badges__list'>
             <div className='Badges__container'>
