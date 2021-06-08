@@ -4,6 +4,7 @@ import './styles/Badges.css';
 import BadgesList from '../components/BadgesList';
 import { Link } from 'react-router-dom';
 import api from '../api'
+import PageLoading from '../components/PageLoading'
 let errorsito = new Error('Errorrrrr')
 
 class Badges extends React.Component{
@@ -13,6 +14,7 @@ class Badges extends React.Component{
         error: null,
         data: undefined
       };
+
 
     componentDidMount(){
       this.fetchData();
@@ -31,10 +33,12 @@ class Badges extends React.Component{
       }
     }
 
+    
+
     render(){
 
       if (this.state.loading === true) {
-        return 'Loading...';
+        return <PageLoading/>;
       }
 
       if (this.state.error){

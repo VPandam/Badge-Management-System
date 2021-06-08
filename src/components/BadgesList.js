@@ -1,6 +1,24 @@
 import React from 'react'
 import './styles/BadgesList.css';
+import {Link} from 'react-router-dom'
 
+class BadgesListItem extends React.Component {
+    render() {
+      return (
+        <><div className='Badges__list__list-avatar'>
+              <img src={this.props.badge.avatarUrl} alt="" />
+          </div><div className='Badges__list__list-text'>
+                  <p className='Badges__list__list-text-name'>{this.props.badge.firstName + ' ' +
+                    this.props.badge.lastName}</p>
+                  <div>
+                      <div className='logo-twitter-container'></div>
+                      <p className='Badges__list__list-text-twitter'>@{this.props.badge.twitter}</p>
+                  </div>
+                  <p className='Badges__list__list-text-jobTitle'>{this.props.badge.jobTitle}</p>
+              </div></>
+      );
+    }
+  }
 class BadgesList extends React.Component{
     render(){
         
@@ -15,17 +33,12 @@ class BadgesList extends React.Component{
                     {this.props.data.map((badge) => {
                         return (
                             <li className='Badges__list__list' key={badge.id}>
-                                <div className='Badges__list__list-avatar'>
-                                    <img src={badge.avatarUrl} alt="" />
-                                </div>
-                                <div className='Badges__list__list-text'>
-                                    <p className='Badges__list__list-text-name'>{badge.firstName} {badge.lastName}</p>
-                                    <div>
-                                        <div className='logo-twitter-container'></div>
-                                        <p className='Badges__list__list-text-twitter'>@{badge.twitter}</p>
-                                    </div>
-                                    <p className= 'Badges__list__list-text-jobTitle'>{badge.jobTitle}</p>
-                                </div>
+                                <Link
+                                    className="text-reset text-decoration-none"
+                                    to={`/badges/${badge.id}/`}
+                                >
+                                    <BadgesListItem badge={badge} />
+                                </Link>
                             </li>
                         )
                     })}
