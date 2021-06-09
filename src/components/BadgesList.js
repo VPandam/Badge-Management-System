@@ -19,35 +19,70 @@ class BadgesListItem extends React.Component {
       );
     }
   }
-class BadgesList extends React.Component{
-    render(){
+function BadgesList(props){
         
-        if (this.props.data.length === 0) {
-            return <h3> No badges found </h3>
-        }
-        
-        return (
-        <div className='Badges__list'>
-            <div className='Badges__container'>
-                <ul className='list-unstyled'>
-                    {this.props.data.map((badge) => {
-                        return (
-                            <li className='Badges__list__list' key={badge.id}>
-                                <Link
-                                    className="text-reset text-decoration-none"
-                                    to={`/badges/${badge.id}/`}
-                                >
-                                    <BadgesListItem badge={badge} />
-                                </Link>
-                            </li>
-                        )
-                    })}
-                </ul>
-            </div>
-        </div>
-        )
+    const [query, setQuery] = React.useState('')
 
+    const filteredBadges = props.data.filter((badges) => {
+        return `${badges.firstName} ${badges.lastName}`.toLocaleLowerCase().includes(query.toLowerCase())
     }
+)
+    // if (filteredBadges.length === 0) {
+    //     return(
+    //         <React.Fragment>
+    //             <div className="form-group">
+    //                 <label>Filter Badges</label>
+    //                 <input 
+    //                 type="text" 
+    //                 className='form-control' 
+    //                 value={query}
+    //                 onChange={(e) => {
+    //                     setQuery(e.target.value)
+                        
+    //                 }}
+    //                 />
+    //             </div>
+    //             <h3> No badges found </h3>
+    //         </React.Fragment>
+    //     )
+    // }
+    
+    return (
+    <div className='Badges__list'>
+        
+        <div className="form-group">
+            <label>Filter Badges</label>
+            <input 
+            type="text" 
+            className='form-control' 
+            value={query}
+            onChange={(e) => {
+                setQuery(e.target.value)
+                
+            }}
+            />
+        </div>
+
+        <div className='Badges__container'>
+            <ul className='list-unstyled'>
+                {filteredBadges.map((badge) => {
+                    return (
+                        <li className='Badges__list__list' key={badge.id}>
+                            <Link
+                                className="text-reset text-decoration-none"
+                                to={`/badges/${badge.id}/`}
+                            >
+                                <BadgesListItem badge={badge} />
+                            </Link>
+                        </li>
+                    )
+                })}
+            </ul>
+        </div>
+    </div>
+    )
+
 }
+
 
 export default BadgesList
