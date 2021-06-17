@@ -6,6 +6,8 @@ import photo from '../images/d.jpg'
 import BadgeForm from '../components/BadgeForm'
 import api from '../api'
 import PageLoading from '../components/PageLoading';
+import Hero from '../components/Hero'
+import { head } from 'lodash';
 
 class BadgeNew extends React.Component{
     state = {
@@ -59,9 +61,12 @@ class BadgeNew extends React.Component{
         }
         return (
             <React.Fragment>
-                <div className='BadgeNew__hero'>
+                {/* <div className='BadgeNew__hero'>
                     <img className='Badge-new__hero-image img-fluid' src={header} alt="" />
-                </div>
+                </div> */}
+
+                <Hero image={header} height='100px'/>
+                
                 <div className='container'>
                     <div className='row'>
                         <div className='col-6'>

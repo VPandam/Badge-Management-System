@@ -5,7 +5,8 @@ import BadgesList from '../components/BadgesList';
 import { Link } from 'react-router-dom';
 import api from '../api'
 import PageLoading from '../components/PageLoading'
-let errorsito = new Error('Errorrrrr')
+import Hero from '../components/Hero'
+let errorsito = new Error('Errorrrrr');
 
 class Badges extends React.Component{
   
@@ -46,16 +47,9 @@ class Badges extends React.Component{
       }
     
       return (
-        <React.Fragment>
-          {console.log(this.state.error)}
-        <div className='Badges'>
-            <div className='Badges__hero'>
-                <div className='Badges__container'>
-                    <img src={confLogo} alt="" className='Badges_conf-logo' />
-                </div>
-            </div>
-        </div>
-
+      <React.Fragment>
+        
+        <Hero image={confLogo}/>
         <div className='Badge__container'>
             <div className='Badges__buttons'>
                 <Link to="/Badges/new" className=' btn btn-primary btn-new-badge'>
