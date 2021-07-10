@@ -8,9 +8,7 @@ class NavBar extends React.Component{
         return(
             <div className='navBar'>
                 <Link to='/'>
-                    <img className='navBar_logo' src={logo} alt="" />
-                    <span className='navBar_title-1'>Platzi</span>
-                    <span className='navBar_title-2'>Conf</span>
+                    <span className='navBar_title-2'>Badge Management</span>
                 </Link>
             </div>
         )

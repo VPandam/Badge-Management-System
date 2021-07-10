@@ -1,13 +1,6 @@
-const BASE_URL = 'https://nervous-kirch-e2accc.netlify.app';
-
-const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-const randomNumber = (min = 0, max = 1) =>
-  Math.floor(Math.random() * (max - min + 1)) + min;
-const simulateNetworkLatency = (min = 30, max = 1500) =>
-  delay(randomNumber(min, max));
+const BASE_URL = 'http://localhost:8090/badges/API';
 
 async function callApi(endpoint, options = {}) {
-  await simulateNetworkLatency();
 
   options.headers = {
     'Content-Type': 'application/json',
@@ -24,10 +17,10 @@ async function callApi(endpoint, options = {}) {
 const api = {
   badges: {
     list() {
-      return callApi('/badges');
+      return callApi('/badges/all');
     },
     create(badge) {
-      return callApi(`/badges`, {
+      return callApi(`/badges/save`, {
         method: 'POST',
         body: JSON.stringify(badge),
       });
@@ -36,14 +29,14 @@ const api = {
       return callApi(`/badges/${badgeId}`);
     },
     update(badgeId, updates) {
-      return callApi(`/badges/${badgeId}`, {
+      return callApi(`/badges/update/${badgeId}`, {
         method: 'PUT',
         body: JSON.stringify(updates),
       });
     },
     // Lo hubiera llamado `delete`, pero `delete` es un keyword en JavaScript asi que no es buena idea :P
     remove(badgeId) {
-      return callApi(`/badges/${badgeId}`, {
+      return callApi(`/badges/delete/${badgeId}`, {
         method: 'DELETE',
       });
     },

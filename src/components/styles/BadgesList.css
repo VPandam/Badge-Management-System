@@ -11,6 +11,12 @@
   border-radius: 5px;
 }
 
+.Badges__list__list a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .Badges__list__list-text {
   position: relative;
   margin-left: 20px;

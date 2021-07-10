@@ -49,7 +49,7 @@ class Badges extends React.Component{
       return (
       <React.Fragment>
         
-        <Hero image={confLogo}/>
+        
         <div className='Badge__container'>
             <div className='Badges__buttons'>
                 <Link to="/Badges/new" className=' btn btn-primary btn-new-badge'>

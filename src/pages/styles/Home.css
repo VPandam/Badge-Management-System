@@ -1,21 +1,45 @@
 .Home {
   width: 100%;
   min-height: calc(100vh - 60px);
-  /* background: url("../../images/stars.svg"), #1b1b25;
-  background-repeat: repeat; */
-  background-color: #1b1b25;
 
-  color: #ffffff;
+  background: rgb(76, 95, 235);
+  background: rgb(76, 95, 235);
+  background: linear-gradient(
+    156deg,
+    rgba(76, 95, 235, 1) 31%,
+    rgba(89, 76, 235, 1) 49%,
+    rgba(65, 55, 171, 1) 87%
+  );
+
+  color: white;
 
   display: flex;
   align-items: center;
 }
 
+.home-container {
+  margin-left: 100px;
+  margin-bottom: 200px;
+}
+
 .Home__col {
+  width: 340px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+}
+
+.Home__col h1 {
+  font-size: 4rem;
+  color: #19193d;
+}
+.Home__col a {
+  margin-top: 20px;
+  height: 50px;
+  width: 150px;
+  font-size: 1.3rem;
 }
 
 @media screen and (min-width: 768px) {

@@ -8,11 +8,12 @@
 
 body {
   font-family: "Lato", "Helvetica Neue", sans-serif;
-  background-color: #f4f4f7;
+  background-color: rgb(120, 133, 230);
 }
 
 h1 {
   font-family: "Anton", sans-serif;
+  color: #19193d;
 }
 
 a.link-unstyled {
@@ -30,24 +31,24 @@ a.link-unstyled:hover {
 
 .btn.btn-primary {
   color: #fff;
-  background-color: #7dcd40;
-  border-color: #7dcd40;
+  background-color: #19193d;
+  border-color: #19193d;
 }
 
 .btn.btn-primary:not(:disabled):not(.disabled):hover {
   color: #fff;
-  background-color: #7dcd40;
-  border-color: #7dcd40;
+  background-color: #19193d;
+  border-color: #19193d;
 }
 
 .btn.btn-primary:not(:disabled):not(.disabled):active {
   color: #fff;
-  background-color: #7dcd40;
-  border-color: #7dcd40;
+  background-color: #19193d;
+  border-color: #19193d;
 }
 
 .btn.btn-primary:not(:disabled):not(.disabled):focus {
-  box-shadow: 0 0 0 0.2rem rgba(125, 205, 64, 0.5);
+  box-shadow: 0 0 0 0.2rem #19193d;
 }
 
 .btn.btn-danger {
@@ -77,6 +78,11 @@ a.link-unstyled:hover {
 }
 .form-group {
   margin-top: 15px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #020205;
 }
 
 .form-group input {

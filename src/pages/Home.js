@@ -9,18 +9,18 @@ export default class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <div className="container">
+        <div className="home-container">
           <div className="row">
             <div className="Home__col col-12 col-md-4">
-              <img
+              {/* <img
                 src={platziconfLogoImage}
                 alt="Platzi Conf Logo"
                 className="img-fluid mb-2"
-              />
+              /> */}
 
               <h1>Badge Management System</h1>
               <Link className="btn btn-primary" to="/badges">
-                Start
+                <label htmlFor=""> Start</label>
               </Link>
             </div>
 

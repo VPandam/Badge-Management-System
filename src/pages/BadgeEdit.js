@@ -43,8 +43,9 @@ class BadgeEdit extends React.Component{
         this.setState({
             form: {
                 
-                ...this.state.form, //Three dots spreads the values of the iterable object.
-                                    //In this case evaluates to all the values that have been typed in the form 
+                //Three dots spreads the values of the iterable object.
+                //In this case evaluates to all the values that have been typed in the form
+                ...this.state.form,
                 [e.target.name]: e.target.value //With this expression we add a new value to the property.
             
                 //Another way to do that would be:
@@ -58,29 +59,26 @@ class BadgeEdit extends React.Component{
     
     handleSubmit = async e =>{
         e.preventDefault();
-        console.log('badgeEdithandlesubmit')
         this.setState({loading: true, error: null});
-        console.log(this.state)
-
+        console.log("update")
         try {
             await api.badges.update(this.props.match.params.badgeId, this.state.form);
-            this.setState({loading:false});
-            console.log(this.props)
 
+            this.setState({loading:false});
             this.props.history.push('/badges');
         } catch (error) {
             this.setState({loading: false, error: error});
         }
     }
+
+
     render(){
         if(this.state.loading){
             return <PageLoading/>;
         }
         return (
             <React.Fragment>
-                <div className='BadgeEdit__hero'>
-                    <img className='Badge-edit__hero-image img-fluid' src={header} alt="" />
-                </div>
+                
                 <div className='container'>
                     <div className='row'>
                         <div className='col-6'>

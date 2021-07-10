@@ -61,11 +61,7 @@ class BadgeNew extends React.Component{
         }
         return (
             <React.Fragment>
-                {/* <div className='BadgeNew__hero'>
-                    <img className='Badge-new__hero-image img-fluid' src={header} alt="" />
-                </div> */}
 
-                <Hero image={header} height='100px'/>
                 
                 <div className='container'>
                     <div className='row'>

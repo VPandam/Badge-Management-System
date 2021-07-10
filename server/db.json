@@ -7,8 +7,7 @@
       "email": "Efrain_Gaylord6@yahoo.com",
       "jobTitle": "Corporate Branding Representative",
       "twitter": "ZoieGrant05512-2019",
-      "avatarUrl": "https://www.gravatar.com/avatar/0fc6d5ee2ee176d4581acf6a7e5644cc?d=identicon",
-      "secondName": "Grant"
+      "avatarUrl": "https://www.gravatar.com/avatar/0fc6d5ee2ee176d4581acf6a7e5644cc?d=identicon"
     },
     {
       "id": "f1183526-aff1-46da-8bfb-976563c6f696",
@@ -36,6 +35,22 @@
       "jobTitle": "Dynamic Tactics Liaison",
       "twitter": "KellyCorkery06275-3676",
       "avatarUrl": "https://www.gravatar.com/avatar/00e35de53a06a655fe5b6ac8b96bdb84?d=identicon"
+    },
+    {
+      "firstName": "Victor",
+      "lastName": "Gea",
+      "jobTitle": "Frontend Developer",
+      "email": "victorvgv96@hotmail.es",
+      "twitter": "Pandam",
+      "id": "ZOdDDqg"
+    },
+    {
+      "firstName": "Putito",
+      "lastName": "",
+      "jobTitle": "iuh",
+      "email": "",
+      "twitter": "",
+      "id": "SS47Bus"
     }
   ]
 }
