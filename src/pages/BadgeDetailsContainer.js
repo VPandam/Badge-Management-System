@@ -48,8 +48,14 @@ class BadgeDetailsContainer extends React.Component {
     this.setState({loading: true, error: false});
 
     try {
-      await api.badges.remove(this.props.match.params.badgeId)
+      if(this.props.match.params.badgeId <= 4){
+        alert("This is a demo badge, you cant delete it!")
+      }else{
+        await api.badges.remove(this.props.match.params.badgeId)
+        
+      }
       this.props.history.push('/badges')
+      
     } catch (error) {
       this.setState({loading: false, error: error})
     }
