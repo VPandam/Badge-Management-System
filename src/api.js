@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8090/badges/API';
+const BASE_URL = 'http://pandam-badges.herokuapp.com/badges/API/';
 
 async function callApi(endpoint, options = {}) {
 
