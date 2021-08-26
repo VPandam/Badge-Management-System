@@ -1,13 +1,11 @@
 import React from 'react';
-import header from '../images/platziconf-logo.svg'
 import './styles/BadgeNew.css'
 import Badge from '../components/Badge'
-import photo from '../images/d.jpg'
+import photo from '../images/userPlaceholder.png'
 import BadgeForm from '../components/BadgeForm'
 import api from '../api'
 import PageLoading from '../components/PageLoading';
-import Hero from '../components/Hero'
-import { head } from 'lodash';
+
 
 class BadgeNew extends React.Component{
     state = {
@@ -41,7 +39,6 @@ class BadgeNew extends React.Component{
     
     handleSubmit = async e =>{
         e.preventDefault();
-        console.log('badgenewhandlesubmit')
         this.setState({loading: true, error: null});
         console.log(this.state)
 
@@ -67,7 +64,7 @@ class BadgeNew extends React.Component{
                     <div className='row'>
                         <div className='col-6'>
                             {console.log(this.state)}
-                            <Badge 
+                            <Badge
                                 firstName={this.state.form.firstName || 'FIRST NAME'} 
                                 surnames={this.state.form.lastName || 'SURNAME'} 
                                 jobTitle={this.state.form.jobTitle || 'JOB TITLE'} 

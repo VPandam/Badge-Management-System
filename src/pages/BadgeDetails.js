@@ -2,12 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles/BadgeDetails.css';
-import confLogo from '../images/platziconf-logo.svg';
-import PageLoading from '../components/PageLoading';
-import PageError from '../components/PageError';
+
 import Badge from '../components/Badge';
-import photo from '../images/d.jpg'
-import Modal from '../components/Modal'
+import photo from '../images/userPlaceholder.png'
+
 import ModalDeleteBadge from '../components/ModalDeleteBadge';
 
 function BadgeDetails(props) {

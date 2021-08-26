@@ -22,7 +22,7 @@ class BadgeDetailsContainer extends React.Component {
     window.onclick = function(e) {
       let modals = document.getElementsByClassName('Modal')
       console.log(modals)
-      if(e.target == modals[0]){
+      if(e.target === modals[0]){
         this.handleCloseModal()
       }
     }.bind(this)
@@ -72,7 +72,6 @@ class BadgeDetailsContainer extends React.Component {
       return <PageError error={this.state.error} />;
     }
 
-    const badge = this.state.data;
     return <BadgeDetails 
     badge={this.state.data} 
     openModal={this.handleOpenModal} 

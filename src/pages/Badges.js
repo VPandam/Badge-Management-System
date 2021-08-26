@@ -1,12 +1,10 @@
 import React from 'react';
-import confLogo from '../images/badge-header.svg';
 import './styles/Badges.css';
 import BadgesList from '../components/BadgesList';
 import { Link } from 'react-router-dom';
 import api from '../api'
 import PageLoading from '../components/PageLoading'
-import Hero from '../components/Hero'
-let errorsito = new Error('Errorrrrr');
+
 
 class Badges extends React.Component{
   
