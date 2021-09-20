@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import './Global.css';
 
-import App from './components/App';
+import App from './App';
 
 
 const container = document.getElementById('app');
